@@ -1,18 +1,18 @@
-{
+    {
     "main": {
-        "title": "Welcome, Java Hipster!",
+        "title": "Welcome, to HipContacts!",
         "subtitle": "This is your homepage",
         "logged": {
             "message": "You are logged in as user \"{{username}}\"."
         },
-        "question": "If you have any question on JHipster:",
+        "question": "If you have any question about HipContacts developer:",
         "link": {
-            "homepage": "JHipster homepage",
-            "stackoverflow": "JHipster on Stack Overflow",
-            "bugtracker": "JHipster bug tracker",
-            "contact": "contact @java_hipster on Twitter"
+            "homepage": "Online Resume",
+            "bugtracker": "HipContacts bug tracker",
+            "github": "You can find HipContacts source in github",
+            "contact": "Send Marcus S. an email"
         },
-        "like": "If you like JHipster, don't forget to give us a star on",
+        "like": "This project is powered by JHipster, if you like it, start it on ",
         "github": "Github"
     }
 }
