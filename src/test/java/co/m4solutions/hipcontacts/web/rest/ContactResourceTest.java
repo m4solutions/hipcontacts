@@ -1,13 +1,25 @@
 package co.m4solutions.hipcontacts.web.rest;
 
-import co.m4solutions.hipcontacts.Application;
-import co.m4solutions.hipcontacts.domain.Contact;
-import co.m4solutions.hipcontacts.repository.ContactRepository;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.hamcrest.Matchers.hasItem;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import java.util.List;
+
+import javax.annotation.PostConstruct;
+import javax.inject.Inject;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import static org.hamcrest.Matchers.hasItem;
 import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.IntegrationTest;
 import org.springframework.boot.test.SpringApplicationConfiguration;
@@ -19,13 +31,9 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.annotation.PostConstruct;
-import javax.inject.Inject;
-import java.util.List;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import co.m4solutions.hipcontacts.Application;
+import co.m4solutions.hipcontacts.domain.Contact;
+import co.m4solutions.hipcontacts.repository.ContactRepository;
 
 /**
  * Test class for the ContactResource REST controller.
@@ -40,13 +48,15 @@ public class ContactResourceTest {
 
     private static final String DEFAULT_FIRST_NAME = "SAMPLE_TEXT";
     private static final String UPDATED_FIRST_NAME = "UPDATED_TEXT";
+    private static final String INVALID_FIRST_NAME = "INVALIDA_TEXTINVALIDA_TEXTINVALIDA_TEXTINVALIDA_TEXTINVALIDA_TEXTINVALIDA_TEXT";
     private static final String DEFAULT_LAST_NAME = "SAMPLE_TEXT";
     private static final String UPDATED_LAST_NAME = "UPDATED_TEXT";
 
     private static final Long DEFAULT_MOBILE = 0L;
     private static final Long UPDATED_MOBILE = 1L;
-    private static final String DEFAULT_EMAIL = "SAMPLE_TEXT";
-    private static final String UPDATED_EMAIL = "UPDATED_TEXT";
+    private static final Long INVALID_MOBILE = 123456789012345678L;
+    private static final String DEFAULT_EMAIL = "SAMPLE@EMAIL.COM";
+    private static final String UPDATED_EMAIL = "UPDATED@EMAIL.COM";
 
     @Inject
     private ContactRepository contactRepository;
@@ -78,7 +88,7 @@ public class ContactResourceTest {
         int databaseSizeBeforeCreate = contactRepository.findAll().size();
 
         // Create the Contact
-        restContactMockMvc.perform(post("/api/contacts")
+         restContactMockMvc.perform(post("/api/contacts")
                 .contentType(TestUtil.APPLICATION_JSON_UTF8)
                 .content(TestUtil.convertObjectToJsonBytes(contact)))
                 .andExpect(status().isCreated());
@@ -100,6 +110,44 @@ public class ContactResourceTest {
         assertThat(contactRepository.findAll()).hasSize(0);
         // set the field null
         contact.setFirstName(null);
+
+        // Create the Contact, which fails.
+        restContactMockMvc.perform(post("/api/contacts")
+                .contentType(TestUtil.APPLICATION_JSON_UTF8)
+                .content(TestUtil.convertObjectToJsonBytes(contact)))
+                .andExpect(status().isBadRequest());
+
+        // Validate the database is still empty
+        List<Contact> contacts = contactRepository.findAll();
+        assertThat(contacts).hasSize(0);
+    }
+    
+    @Test
+    @Transactional
+    public void checkFirstNameMaxLenght25() throws Exception {
+        // Validate the database is empty
+        assertThat(contactRepository.findAll()).hasSize(0);
+        // set INVALID lengt field value
+        contact.setFirstName(INVALID_FIRST_NAME);
+
+        // Create the Contact, which fails.
+        restContactMockMvc.perform(post("/api/contacts")
+                .contentType(TestUtil.APPLICATION_JSON_UTF8)
+                .content(TestUtil.convertObjectToJsonBytes(contact)))
+                .andExpect(status().isBadRequest());
+
+        // Validate the database is still empty
+        List<Contact> contacts = contactRepository.findAll();
+        assertThat(contacts).hasSize(0);
+    }
+    
+    @Test
+    @Transactional
+    public void checkMobileMaxLenght15() throws Exception {
+        // Validate the database is empty
+        assertThat(contactRepository.findAll()).hasSize(0);
+        // set INVALID lengt field value
+        contact.setMobile(INVALID_MOBILE);
 
         // Create the Contact, which fails.
         restContactMockMvc.perform(post("/api/contacts")
@@ -198,5 +246,24 @@ public class ContactResourceTest {
         // Validate the database is empty
         List<Contact> contacts = contactRepository.findAll();
         assertThat(contacts).hasSize(databaseSizeBeforeDelete - 1);
+    }
+    
+    @Test
+    @Transactional
+    public void deleteNonExistentContact() throws Exception {
+    	//Arrange
+        // Initialize the database
+        contactRepository.saveAndFlush(contact);
+		
+		int databaseSizeBeforeDelete = contactRepository.findAll().size();
+
+        // ACT Get the contact
+		try{
+			restContactMockMvc.perform(delete("/api/contacts/{id}", Long.MAX_VALUE));
+		}catch(Exception e){
+			//Assert
+			assertTrue(e.getCause().getMessage().contains("Contact entity with id "+Long.MAX_VALUE+" exists!"));	
+		}
+		assertEquals(databaseSizeBeforeDelete, contactRepository.findAll().size());
     }
 }
