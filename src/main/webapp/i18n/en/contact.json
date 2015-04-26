@@ -1,0 +1,22 @@
+{
+    "hipcontactsApp": {
+        "contact" : {
+            "home": {
+                "title": "Contacts",
+                "createLabel": "Create a new Contact",
+                "createOrEditLabel": "Create or edit a Contact"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Contact {{ id }}?"
+            },
+            "detail": {
+                "title": "Contact"
+            },
+            "firstName": "FirstName",
+            "lastName": "LastName",
+            "mobile": "Mobile",
+            "email": "Email",
+            "user": "user"
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "generator-jhipster": {
+    "baseName": "hipcontacts",
+    "packageName": "co.m4solutions.hipcontacts",
+    "packageFolder": "co/m4solutions/hipcontacts",
+    "authenticationType": "oauth2",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "postgresql",
+    "useCompass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "javaVersion": "7",
+    "rememberMeKey": "ace6aac9c71b34cb0d6e4c6a7324789ca293b421"
+  }
+}
