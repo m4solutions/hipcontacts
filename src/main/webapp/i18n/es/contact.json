@@ -1,0 +1,22 @@
+{
+    "hipcontactsApp": {
+        "contact" : {
+            "home": {
+                "title": "Contactos",
+                "createLabel": "Crear un nuevo Contacto",
+                "createOrEditLabel": "Crear o editar un Contacto"
+            },
+            "delete": {
+                "question": "Esta seguro, que desea eliminar el Contacto {{ id }}?"
+            },
+            "detail": {
+                "title": "Contacto"
+            },
+            "firstName": "Nombre",
+            "lastName": "Apellido",
+            "mobile": "Celular",
+            "email": "E-mail",
+            "user": "user"
+        }
+    }
+}

@@ -5,7 +5,8 @@
         "menu": {
             "home": "Inicio",
             "entities": {
-                "main": "Entities",
+                "main": "Entidades",
+                "contact": "Contactos",
                 "additionalEntity": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
@@ -71,29 +72,29 @@
     },
     "entity": {
         "action": {
-            "back": "Back",
-            "cancel": "Cancel",
-            "delete": "Delete",
-            "edit": "Edit",
-            "save": "Save",
-            "view": "View"
+            "back": "Atras",
+            "cancel": "Cancelar",
+            "delete": "Borrar",
+            "edit": "Editar",
+            "save": "Guardar",
+            "view": "Ver"
         },
         "detail": {
-            "field": "Field",
-            "value": "Value"
+            "field": "Campo",
+            "value": "Valor"
         },
         "delete": {
-            "title": "Confirm delete operation"
+            "title": "Confirma la operación de borrado"
         },
         "validation": {
-            "required": "This field is required.",
-            "minlength": "This field is required to be at least {{min}} characters.",
-            "maxlength": "This field cannot be longer than {{max}} characters.",
-            "min": "This field should be more than {{min}}.",
-            "max": "This field cannot be more than {{max}}.",
+            "required": "Este campo es requerido.",
+            "minlength": "Este campo debe tener al menos {{min}} caracteres.",
+            "maxlength": "Este campo no puede tener mas de {{max}} caracteres.",
+            "min": "Este campo no debe ser menos de {{min}}.",
+            "max": "Este campo no debe ser mas de {{max}}.",
             "pattern": "This field should follow pattern {{pattern}}.",
-            "number": "This field should be a number.",
-            "datetimelocal": "This field should be a date and time."
+            "number": "Este campo debe ser númerico.",
+            "datetimelocal": "Este campo debe ser una fecha y hora."
         }
     },
     "footer": "pie de página"
