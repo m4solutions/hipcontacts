@@ -9,9 +9,10 @@
         "link": {
             "homepage": "CV en ligne",
             "bugtracker": "HipContacts bug tracker",
-            "contact": "Envoyer Marcus S. un message"
+            "contact": "Envoyer Marcus S. un message",
+            "github": "Vous pouvez trouver HipContacts source dans GitHub"
         },
         "like": "Ce projet est alimenté par JHipster, si vous l'aimez, démarre sur",
-        "github": "Github"
+        "github": "Github" 
     }
 }

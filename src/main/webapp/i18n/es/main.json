@@ -7,10 +7,12 @@
         },
         "question": "Si tiene preguntas sobre el desarrollador de HipContacts:",
         "link": {
-            "homepage": "Online Resume",
+            "homepage": "Hoja de Vida Online",
             "bugtracker": "HipContacts seguimiento de errores",
-            "contact": "Enviale un e-mail a Marcus S."
+            "contact": "Enviale un e-mail a Marcus S.",
+             "github": "Puedes encontrar HipContacts in GitHub"
         },
+        
         "like": "Este proyecto es impulsado por JHipster si le gusta dele una estrella en",
         "github": "Github"
     }
