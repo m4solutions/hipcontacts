@@ -44,7 +44,7 @@ public class Contact implements Serializable {
     @Column(name = "last_name", length = 25)
     private String lastName;
 
-    @Max(value = 15)
+    @Max(value = 999999999999999l)
     @Column(name = "mobile")
     private Long mobile;
 
