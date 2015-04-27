@@ -1,1 +1,1 @@
-web:    java -jar target/hipcontacts-0.0.1-SNAPSHOT.war
+web:    java -Xmx384m -Xss512k -XX:+UseCompressedOops -jar target/*.war --spring.profiles.active=dev --server.port=$PORT  --spring.datasource.heroku-url=$DATABASE_URL
