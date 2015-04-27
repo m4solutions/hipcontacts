@@ -2,6 +2,7 @@ package co.m4solutions.hipcontacts.security;
 
 /**
  * Constants for Spring Security authorities.
+ * example of secure coding practice
  */
 public final class AuthoritiesConstants {
 
