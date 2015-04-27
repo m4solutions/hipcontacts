@@ -122,6 +122,10 @@ public class ContactResourceTest {
         assertThat(contacts).hasSize(0);
     }
     
+    /**
+     * @author marcus.sanchez
+     * @throws Exception
+     */
     @Test
     @Transactional
     public void checkFirstNameMaxLenght25() throws Exception {
@@ -141,6 +145,10 @@ public class ContactResourceTest {
         assertThat(contacts).hasSize(0);
     }
     
+    /**
+     * @author marcus.sanchez
+     * @throws Exception
+     */
     @Test
     @Transactional
     public void checkMobileMaxLenght15() throws Exception {
@@ -248,6 +256,10 @@ public class ContactResourceTest {
         assertThat(contacts).hasSize(databaseSizeBeforeDelete - 1);
     }
     
+    /**
+     * @author marcus.sanchez
+     * @throws Exception
+     */
     @Test
     @Transactional
     public void deleteNonExistentContact() throws Exception {
