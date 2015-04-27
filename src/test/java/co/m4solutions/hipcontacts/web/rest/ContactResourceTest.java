@@ -106,8 +106,8 @@ public class ContactResourceTest {
     @Test
     @Transactional
     public void checkFirstNameIsRequired() throws Exception {
-        // Validate the database is empty
-        assertThat(contactRepository.findAll()).hasSize(0);
+        // Validate the database
+        int beforeSize = contactRepository.findAll().size();
         // set the field null
         contact.setFirstName(null);
 
@@ -119,7 +119,8 @@ public class ContactResourceTest {
 
         // Validate the database is still empty
         List<Contact> contacts = contactRepository.findAll();
-        assertThat(contacts).hasSize(0);
+        int afterSize = contactRepository.findAll().size();
+        assertEquals(afterSize, beforeSize);
     }
     
     /**
@@ -129,8 +130,8 @@ public class ContactResourceTest {
     @Test
     @Transactional
     public void checkFirstNameMaxLenght25() throws Exception {
-        // Validate the database is empty
-        assertThat(contactRepository.findAll()).hasSize(0);
+        // Validate the database 
+    	int beforeSize = contactRepository.findAll().size();
         // set INVALID lengt field value
         contact.setFirstName(INVALID_FIRST_NAME);
 
@@ -142,7 +143,8 @@ public class ContactResourceTest {
 
         // Validate the database is still empty
         List<Contact> contacts = contactRepository.findAll();
-        assertThat(contacts).hasSize(0);
+        int afterSize = contactRepository.findAll().size();
+        assertEquals(afterSize, beforeSize);
     }
     
     /**
@@ -152,8 +154,8 @@ public class ContactResourceTest {
     @Test
     @Transactional
     public void checkMobileMaxLenght15() throws Exception {
-        // Validate the database is empty
-        assertThat(contactRepository.findAll()).hasSize(0);
+        // Validate the database 
+    	int beforeSize = contactRepository.findAll().size();
         // set INVALID lengt field value
         contact.setMobile(INVALID_MOBILE);
 
@@ -164,8 +166,8 @@ public class ContactResourceTest {
                 .andExpect(status().isBadRequest());
 
         // Validate the database is still empty
-        List<Contact> contacts = contactRepository.findAll();
-        assertThat(contacts).hasSize(0);
+        int afterSize = contactRepository.findAll().size();
+        assertEquals(afterSize, beforeSize);
     }
 
     @Test
