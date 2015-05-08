@@ -31,9 +31,10 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.transaction.annotation.Transactional;
 
-import co.m4solutions.hipcontacts.Application;
-import co.m4solutions.hipcontacts.domain.Contact;
-import co.m4solutions.hipcontacts.repository.ContactRepository;
+import co.marcuss.hipcontacts.Application;
+import co.marcuss.hipcontacts.domain.Contact;
+import co.marcuss.hipcontacts.repository.ContactRepository;
+import co.marcuss.hipcontacts.web.rest.ContactResource;
 
 /**
  * Test class for the ContactResource REST controller.

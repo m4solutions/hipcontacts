@@ -9,7 +9,7 @@
         <relativePath />
     </parent>
 
-    <groupId>co.m4solutions.hipcontacts</groupId>
+    <groupId>co.marcuss.hipcontacts</groupId>
     <artifactId>hipcontacts</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
@@ -544,7 +544,7 @@
                     <defaultSchemaName />
                     <username />
                     <password />
-                    <referenceUrl>hibernate:spring:co.m4solutions.hipcontacts.domain?dialect=</referenceUrl>
+                    <referenceUrl>hibernate:spring:co.marcuss.hipcontacts.domain?dialect=</referenceUrl>
                     <verbose>true</verbose>
                     <logging>debug</logging>
                     <diffExcludeObjects>oauth_access_token, oauth_approvals, oauth_client_details, oauth_client_token, oauth_code, oauth_refresh_token</diffExcludeObjects>

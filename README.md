@@ -1,6 +1,6 @@
 README for hipcontacts
 ==========================
-1- To download HipContacts source code as a zip here: https://github.com/m4solutions/hipcontacts/archive/master.zip
+1- To download HipContacts source code as a zip here: https://github.com/marcuss/hipcontacts/archive/master.zip
 
 2- To RUN HipContacts after download and using maven, execute the command    **mvn spring-boot:run**
 

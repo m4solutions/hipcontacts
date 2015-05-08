@@ -12,27 +12,27 @@
             overflowToDisk="false"
             />
 
-    <cache name="co.m4solutions.hipcontacts.domain.User"
+    <cache name="co.marcuss.hipcontacts.domain.User"
            timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="co.m4solutions.hipcontacts.domain.Authority"
+    <cache name="co.marcuss.hipcontacts.domain.Authority"
            timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="co.m4solutions.hipcontacts.domain.User.authorities"
+    <cache name="co.marcuss.hipcontacts.domain.User.authorities"
            timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="co.m4solutions.hipcontacts.domain.PersistentToken"
+    <cache name="co.marcuss.hipcontacts.domain.PersistentToken"
            timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="co.m4solutions.hipcontacts.domain.User.persistentTokens"
+    <cache name="co.marcuss.hipcontacts.domain.User.persistentTokens"
            timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="co.m4solutions.hipcontacts.domain.PersistentAuditEvent"
+    <cache name="co.marcuss.hipcontacts.domain.PersistentAuditEvent"
            timeToLiveSeconds="3600">
     </cache>
 </ehcache>

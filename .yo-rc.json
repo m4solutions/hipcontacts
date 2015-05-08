@@ -1,7 +1,7 @@
 {
   "generator-jhipster": {
     "baseName": "hipcontacts",
-    "packageName": "co.m4solutions.hipcontacts",
+    "packageName": "co.marcuss.hipcontacts",
     "packageFolder": "co/m4solutions/hipcontacts",
     "authenticationType": "oauth2",
     "hibernateCache": "ehcache",

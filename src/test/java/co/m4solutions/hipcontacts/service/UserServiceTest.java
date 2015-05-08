@@ -1,8 +1,10 @@
 package co.m4solutions.hipcontacts.service;
 
-import co.m4solutions.hipcontacts.Application;
-import co.m4solutions.hipcontacts.domain.User;
-import co.m4solutions.hipcontacts.repository.UserRepository;
+import co.marcuss.hipcontacts.Application;
+import co.marcuss.hipcontacts.domain.User;
+import co.marcuss.hipcontacts.repository.UserRepository;
+import co.marcuss.hipcontacts.service.UserService;
+
 import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
 import org.junit.Test;
@@ -14,6 +16,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import javax.inject.Inject;
+
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;

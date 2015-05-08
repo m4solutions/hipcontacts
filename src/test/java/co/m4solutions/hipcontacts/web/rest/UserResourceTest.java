@@ -1,7 +1,9 @@
 package co.m4solutions.hipcontacts.web.rest;
 
-import co.m4solutions.hipcontacts.Application;
-import co.m4solutions.hipcontacts.repository.UserRepository;
+import co.marcuss.hipcontacts.Application;
+import co.marcuss.hipcontacts.repository.UserRepository;
+import co.marcuss.hipcontacts.web.rest.UserResource;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -14,9 +14,10 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.boot.actuate.audit.AuditEvent;
 
-import co.m4solutions.hipcontacts.config.audit.AuditEventConverter;
-import co.m4solutions.hipcontacts.domain.PersistentAuditEvent;
-import co.m4solutions.hipcontacts.repository.PersistenceAuditEventRepository;
+import co.marcuss.hipcontacts.config.audit.AuditEventConverter;
+import co.marcuss.hipcontacts.domain.PersistentAuditEvent;
+import co.marcuss.hipcontacts.repository.PersistenceAuditEventRepository;
+import co.marcuss.hipcontacts.service.AuditEventService;
 
 /**
  * 

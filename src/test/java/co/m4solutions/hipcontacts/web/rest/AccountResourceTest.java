@@ -1,14 +1,16 @@
 package co.m4solutions.hipcontacts.web.rest;
 
-import co.m4solutions.hipcontacts.Application;
-import co.m4solutions.hipcontacts.domain.Authority;
-import co.m4solutions.hipcontacts.domain.User;
-import co.m4solutions.hipcontacts.repository.AuthorityRepository;
-import co.m4solutions.hipcontacts.repository.UserRepository;
-import co.m4solutions.hipcontacts.security.AuthoritiesConstants;
-import co.m4solutions.hipcontacts.service.MailService;
-import co.m4solutions.hipcontacts.service.UserService;
-import co.m4solutions.hipcontacts.web.rest.dto.UserDTO;
+import co.marcuss.hipcontacts.Application;
+import co.marcuss.hipcontacts.domain.Authority;
+import co.marcuss.hipcontacts.domain.User;
+import co.marcuss.hipcontacts.repository.AuthorityRepository;
+import co.marcuss.hipcontacts.repository.UserRepository;
+import co.marcuss.hipcontacts.security.AuthoritiesConstants;
+import co.marcuss.hipcontacts.service.MailService;
+import co.marcuss.hipcontacts.service.UserService;
+import co.marcuss.hipcontacts.web.rest.AccountResource;
+import co.marcuss.hipcontacts.web.rest.dto.UserDTO;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,6 +29,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import javax.inject.Inject;
 import javax.transaction.Transactional;
+
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;

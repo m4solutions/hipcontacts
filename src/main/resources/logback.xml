@@ -27,7 +27,7 @@
     </appender>
 -->
 
-    <logger name="co.m4solutions.hipcontacts" level="${logback.loglevel}"/>
+    <logger name="co.marcuss.hipcontacts" level="${logback.loglevel}"/>
 
     <logger name="javax.activation" level="WARN"/>
     <logger name="javax.mail" level="WARN"/>
