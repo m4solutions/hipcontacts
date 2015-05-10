@@ -4,6 +4,9 @@ README for hipcontacts
 
 2- To RUN HipContacts after download and using maven, execute the command    **mvn spring-boot:run**
 
+3- Currently a copy of this app is running in a herouku container available at: https://hipcontacts.herokuapp.com/
+(it takes a couples of minutes loading since the iddle cloudlets hibernate)
+
 
 About the fulfillment the following requirements
 * The back end server is running on Java platform
