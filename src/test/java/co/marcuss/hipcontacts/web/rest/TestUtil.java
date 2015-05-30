@@ -1,4 +1,4 @@
-package co.m4solutions.hipcontacts.web.rest;
+package co.marcuss.hipcontacts.web.rest;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;

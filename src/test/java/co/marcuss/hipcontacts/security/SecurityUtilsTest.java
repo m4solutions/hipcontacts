@@ -1,4 +1,4 @@
-package co.m4solutions.hipcontacts.security;
+package co.marcuss.hipcontacts.security;
 
 import org.junit.Test;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

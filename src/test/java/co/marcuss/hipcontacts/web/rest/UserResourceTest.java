@@ -1,4 +1,4 @@
-package co.m4solutions.hipcontacts.web.rest;
+package co.marcuss.hipcontacts.web.rest;
 
 import co.marcuss.hipcontacts.Application;
 import co.marcuss.hipcontacts.repository.UserRepository;

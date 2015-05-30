@@ -1,4 +1,4 @@
-package co.m4solutions.hipcontacts.web.rest;
+package co.marcuss.hipcontacts.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;

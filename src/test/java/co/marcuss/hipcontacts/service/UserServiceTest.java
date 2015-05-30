@@ -1,4 +1,4 @@
-package co.m4solutions.hipcontacts.service;
+package co.marcuss.hipcontacts.service;
 
 import co.marcuss.hipcontacts.Application;
 import co.marcuss.hipcontacts.domain.User;

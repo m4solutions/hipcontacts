@@ -1,4 +1,4 @@
-package co.m4solutions.hipcontacts.service;
+package co.marcuss.hipcontacts.service;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.doReturn;
