@@ -6,11 +6,11 @@ spring:
         active: prod
     datasource:
         dataSourceClassName: org.postgresql.ds.PGSimpleDataSource
-        url: 
-        databaseName: hipcontacts
-        serverName: localhost
-        username: hipcontacts
-        password: 
+        url: postgres://bsdeyrkazrmoft:0a1401a1ebcbcbfe40adbb126ee5f8f2319cd26276d6ddb463809499e9b1730b@ec2-54-221-217-158.compute-1.amazonaws.com:5432/d25aucuairch14
+        databaseName: d25aucuairch14
+        serverName: ec2-54-221-217-158.compute-1.amazonaws.com
+        username: bsdeyrkazrmoft
+        password: 0a1401a1ebcbcbfe40adbb126ee5f8f2319cd26276d6ddb463809499e9b1730b
 
     jpa:
         database-platform: org.hibernate.dialect.PostgreSQL82Dialect
